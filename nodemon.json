@@ -1,0 +1,7 @@
+{
+    "env": {
+      "MONGO_USER": "Gabi",
+      "MONGO_PASS": "Gabi",
+      "MONGO_DB": "rottenTomatoes"
+    }
+  }
