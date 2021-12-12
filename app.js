@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -66,7 +68,10 @@ app.use((error, req, res, next) => {
 // connect to db
 const MONGOOSE_URI = `mongodb+srv://alessandro:epitech@cluster0.yaok9.mongodb.net/ratingMovies?retryWrites=true&w=majority`;
 mongoose
-  .connect(MONGOOSE_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGOOSE_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then((result) => {
     app.listen(8010);
   })
