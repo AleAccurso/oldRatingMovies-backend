@@ -66,7 +66,6 @@ app.use((error, req, res, next) => {
 });
 
 // connect to db
-const MONGOOSE_URI = `mongodb+srv://alessandro:epitech@cluster0.yaok9.mongodb.net/ratingMovies?retryWrites=true&w=majority`;
 mongoose
   .connect(process.env.MONGOOSE_URI, {
     useNewUrlParser: true,
