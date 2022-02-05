@@ -61,7 +61,7 @@ router.patch("/:id", (req, res) => {
 
 //Delete movie from DB
 router.route("/delete/:id").delete((req, res) => {
-  movieModel.deleteOne({ id: req.params.id }, (err) => {
+  movieModel.deleteOne({ _id: req.params.id }, (err) => {
     if (err) {
       res.status(500).send("Error");
     } else {
